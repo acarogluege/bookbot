@@ -17,3 +17,12 @@ def count_character(filepath, ):
             else:
                 char_counts[char] += 1
     return char_counts
+
+def chars_dict_to_sorted_list(char_counts):
+    chars_list = []
+    # Convert each key-value pair to a dictionary
+    for char, count in char_counts.items():
+        chars_list.append({"char": char, "num": count})
+    # Sort the list by the "num" value in descending order
+    chars_list.sort(reverse=True, key=lambda x: x["num"])
+    return chars_list
