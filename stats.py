@@ -17,5 +17,3 @@ def count_character(filepath, ):
             else:
                 char_counts[char] += 1
     return char_counts
-    
-    
